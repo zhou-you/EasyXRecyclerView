@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+   <!-- <com.zhouyou.ui.sdk.CommonTopBar
+        android:id="@+id/common_top_bar"
+        style="@style/HetUi.TopBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:focusableInTouchMode="true">
+    </com.zhouyou.ui.sdk.CommonTopBar>-->
+
+
+    <RelativeLayout
+        android:id="@+id/rl_chat_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color4"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@color/color21"
+            android:layout_alignParentBottom="true"
+            >
+            <com.zhouyou.ui.sdk.CommonEditText
+                android:id="@+id/et_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                />
+            <Button
+                android:id="@+id/btn_send_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/color6"
+                android:text="send"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_chat_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_input"
+            >
+
+            <com.zhouyou.recyclerview.XRecyclerView
+                android:id="@+id/recyclerview_chat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </com.zhouyou.recyclerview.XRecyclerView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

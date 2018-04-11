@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/activity_main"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_group_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="分组的列表"/>
+
+            <Button
+                android:id="@+id/btn_no_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="不带组头列表"/>
+
+            <Button
+                android:id="@+id/btn_no_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="不带组尾的列表"/>
+
+            <Button
+                android:id="@+id/btn_grid_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="子项为Grid的列表"/>
+
+            <Button
+                android:id="@+id/btn_grid_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="子项为Grid的列表（各组子项的Span不同）"/>
+
+            <Button
+                android:id="@+id/btn_expandable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="可展开收起的列表"/>
+
+            <Button
+                android:id="@+id/btn_various"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="头、尾和子项都支持多种类型的列表"/>
+            <Button
+                android:id="@+id/btn_various_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="多子项类型的列表"/>
+            <Button
+                android:id="@+id/btn_group_sticky"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="分组带有Sticky的列表"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

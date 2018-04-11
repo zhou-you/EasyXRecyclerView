@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#F9F4F3"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_start_color"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_shape"
+                android:fitsSystemWindows="true"
+                android:gravity="center"
+                android:text="我是头部"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_collapseMode="parallax"
+                />
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <com.zhouyou.smarttab.SmartTabLayout
+            android:id="@+id/smartTabLayout"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="42dp"
+            android:clipToPadding="false"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:scrollbars="none"
+            app:stl_defaultTabTextColor="@color/tag_tab_selector"
+            app:stl_defaultTabTextHorizontalPadding="13dp"
+            app:stl_defaultTabTextMinWidth="55dp"
+            app:stl_dividerColor="@color/transparent"
+            app:stl_dividerThickness="0dp"
+            app:stl_defaultTabTextSize="14sp"
+            app:stl_indicatorColor="@color/color_77"
+            app:stl_indicatorCornerRadius="15dp"
+            app:stl_indicatorGravity="center"
+            app:stl_indicatorInterpolation="smart"
+            app:stl_indicatorThickness="27dp"
+            app:stl_underlineColor="@color/transparent"
+            app:stl_underlineThickness="0dp"
+            app:stl_defaultTabTextMaxLength="5"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/slidingViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 android:orientation="vertical">
+
+    <!-- StickyNestedScrollView 嵌套 ViewPager 导致 ViewPager 显示不出来的问题
+    需要设置： android:fillViewport="true"  代码中用：.setFillViewport(true)-->
+    <com.zhouyou.recyclerview.sticky.StickyNestedScrollView
+        android:id="@+id/stickview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!--在 StickyNestedScrollView 嵌套 RecycleView 时，可能会出现首次进入页面，
+        页面的位置不在最顶部的问题。有可能是停在了 RecycleView 的部位,在 StickyNestedScrollView 唯一子布局中加入
+        android:descendantFocusability="blocksDescendants"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardview_shadow_start_color"
+                android:gravity="center"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"
+                    android:layout_marginLeft="5dip"
+                    android:background="@drawable/bg_shape"
+                    android:gravity="center"
+                    android:text="我是头部"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:tag="sticky-nonconstant">
+
+                <com.zhouyou.smarttab.SmartTabLayout
+                    android:id="@+id/smartTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:clipToPadding="false"
+                    app:stl_defaultTabTextColor="@color/smart_tab_color"
+                    app:stl_defaultTabTextHorizontalPadding="5dp"
+                    app:stl_defaultTabTextSize="15sp"
+                    app:stl_distributeEvenly="true"
+                    app:stl_dividerColor="@color/transparent"
+                    app:stl_indicatorColor="@color/color_app_themes"
+                    app:stl_indicatorInterpolation="linear"
+                    app:stl_indicatorThickness="2dp"
+                    app:stl_indicatorWithoutPadding="true"
+                    app:stl_underlineColor="@color/color_e5"
+                    app:stl_underlineThickness="1px"/>
+            </LinearLayout>
+
+            <com.zhouyou.smarttab.viewpager.SlidingViewPager
+                android:id="@+id/slidingViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:stretched="true"
+                />
+        </LinearLayout>
+    </com.zhouyou.recyclerview.sticky.StickyNestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

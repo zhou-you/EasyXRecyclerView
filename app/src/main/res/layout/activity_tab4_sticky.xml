@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhouyou.recyclerview.sticky.StickyNavLayout
+    android:id="@+id/id_stick"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:isStickNav="false">
+
+
+    <LinearLayout
+        android:id="@id/id_stickynavlayout_topview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_shape"
+            android:fitsSystemWindows="true"
+            android:gravity="center"
+            android:text="我是头部"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_collapseMode="parallax"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/id_stickynavlayout_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/white"
+        >
+
+        <com.zhouyou.smarttab.SmartTabLayout
+            android:id="@+id/smartTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/green_normal"
+            android:clipToPadding="false"
+            app:stl_defaultTabTextColor="@color/smart_tab_color"
+            app:stl_defaultTabTextHorizontalPadding="5dp"
+            app:stl_defaultTabTextSize="15sp"
+            app:stl_distributeEvenly="true"
+            app:stl_dividerColor="@color/transparent"
+            app:stl_indicatorColor="@color/color_app_themes"
+            app:stl_indicatorInterpolation="linear"
+            app:stl_indicatorThickness="2dp"
+            app:stl_indicatorWithoutPadding="true"
+            app:stl_underlineColor="@color/color_e5"
+            app:stl_underlineThickness="1px"/>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@id/id_stickynavlayout_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</com.zhouyou.recyclerview.sticky.StickyNavLayout>

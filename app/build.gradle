@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.zhouyou.recyclerviewdemo"
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    /*compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }*/
+    lintOptions {
+        abortOnError false
+    }
+
+    configurations.all {
+        resolutionStrategy {//由于各个依赖库中版本不一致，有时会导致一些异常情况，故强制使用同一版本
+            force "com.android.support:recyclerview-v7:25.0.1"
+            force "com.android.support:appcompat-v7:25.0.1"
+            force "com.android.support:design:25.0.1"
+            force "com.android.support:support-vector-drawable:25.0.1"
+        }
+    }
+
+    /*configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '25.2.0'
+                }
+            }
+        }
+    }*/
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile(name: 'smarttab-release', ext: 'aar')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile project(':easyrecyclerview')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+}

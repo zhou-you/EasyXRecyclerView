@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_alpha"
+        android:title="@string/alpha"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_scale"
+        android:title="@string/scale"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_slide_from_left"
+        android:title="@string/slide_from_left"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_slide_from_right"
+        android:title="@string/slide_from_right"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_slide_from_bottom"
+        android:title="@string/slide_from_bottom"
+        app:showAsAction="never"/>
+</menu>

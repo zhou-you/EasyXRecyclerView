@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="序言"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="  本Demo是对针对hetrecyclerviewsdk库的使用进行的一个详细举例说明，以往使用都是用ListView、GrideView，瀑布流等控件(recyclerview完全可以替代)配合系统adapter适配器来使用，在使用过程中大量复杂重复工作，宝宝和大家一样甚是忧伤，
+        但是该功能又是在app中使用比较多的控件，系统也早就推荐使用recyclerview，于是受公共模块同事的邀请，基于小力同学找的XRecyclerView库基础上，
+        加入平时工作收集整理的万能适配器，刷新、拖拽、侧滑删除、item动画效果、数据接口规范、动态添加头部尾部等功能，都可以支持自定义，使原生recyclerview更强大，基于每个功能点既能独立开又能结合在一起实现复杂效果的思想，
+        追求使用起来代码简单，功能强大、易扩展的特点初步形成hetrecyclerviewsdk V1.0版本，欢迎大家拍砖~"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="作者：zhouyou"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>

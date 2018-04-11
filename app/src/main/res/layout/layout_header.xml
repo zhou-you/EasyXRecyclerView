@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:id="@+id/btn_header"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="match_parent"
+          android:layout_height="100dp"
+          android:background="#545454"
+          android:gravity="center"
+          android:text="我是头部"
+          android:layout_margin="10dp"
+    />
+
+
+

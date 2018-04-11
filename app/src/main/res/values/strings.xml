@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">EasyRecyclerView</string>
+    <string name="alpha">Alpha</string>
+    <string name="scale">Scale</string>
+    <string name="slide_from_left">Slide from left</string>
+    <string name="slide_from_right">Slide from right</string>
+    <string name="slide_from_bottom">Slide from bottom</string>
+
+    <string-array name="news">
+        <item>关注</item>
+        <item>推荐</item>
+        <item>深圳</item>
+        <item>视频</item>
+        <item>热点</item>
+        <item>娱乐</item>
+        <item>科技</item>
+        <item>健康</item>
+        <item>图片</item>
+        <item>趣图</item>
+        <item>房产</item>
+        <item>情感</item>
+        <item>财经</item>
+        <item>精选</item>
+    </string-array>
+    <string-array name="titles">
+        <item>对话京东农业无人机：大公司亏钱 小公司勉强生存</item>
+        <item>美国监管OCC将在三月内发布Fintech章程</item>
+    </string-array>
+    <string-array name="contents">
+        <item>不管是在四川、陕西，还是其他省市，京东于无人机领域的动作，每一步都与物流相勾连——去年四月</item>
+        <item>fintech行业一直非常密切地关注着去年11月被任命为OCC的负责人Joseph Otting的举动，包括是否会继续允许fintech公司在全国范围内开展业务，该项章程最早由他的前任Thomas Curry于2016年首次宣布。</item>
+    </string-array>
+</resources>
