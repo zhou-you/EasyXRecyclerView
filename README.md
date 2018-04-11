@@ -1,0 +1,2 @@
+## EasyXRecyclerView
+本库主要提供一个简单易用强大的RecyclerView。
