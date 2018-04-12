@@ -17,6 +17,7 @@ import java.util.List;
  * 日期： 2018/1/26 17:45 <br>
  * 版本： v1.0<br>
  */
+@SuppressWarnings("unchecked")
 public abstract class GroupedStateRecyclerViewAdapter<T>
         extends GroupedRecyclerViewAdapter<T> {
 

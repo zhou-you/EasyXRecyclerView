@@ -8,7 +8,7 @@ package com.zhouyou.recyclerview.refresh;
  *     
  *     修改者： zhouyou<br>
  *     修改内容：新增了public static final int ClifeIndicator = 28;<br>
- *     支持Clife的动画的Style<br>
+ *     支持自定义动画的Style<br>
  */
 public class ProgressStyle {
     public static final int SysProgress = -1;

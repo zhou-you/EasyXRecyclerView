@@ -4,6 +4,7 @@ buildscript {
     repositories {
         jcenter()
     }
+    
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.0'
         // 添加上传到jcenter所需的插件
@@ -16,15 +17,22 @@ allprojects {
     repositories {
         jcenter()
     }
-    tasks.withType(Javadoc) {
+   /* tasks.withType(Javadoc) {
         options.addStringOption('Xdoclint:none', '-quiet')
         options.addStringOption('encoding', 'UTF-8')
+    }*/
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
     }
-    tasks.withType(JavaCompile) {
-        options.compilerArgs << "-Xlint:unchecked"  << "-Xlint:deprecation"
-    }
+
+  /*  task javadoc(type: Javadoc) {
+        options.encoding = "utf-8"
+    }*/
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+

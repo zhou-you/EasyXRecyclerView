@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 
 import com.zhouyou.recyclerview.XRecyclerView;
 import com.zhouyou.recyclerview.adapter.HelperRecyclerViewHolder;
-import com.zhouyou.recyclerviewsdk.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,9 +29,14 @@ import java.util.List;
 public abstract class GroupedRecyclerViewAdapter<T>
         extends RecyclerView.Adapter<HelperRecyclerViewHolder> {
     private List<T> mGroups;
+    public static final int TYPE_HEADER =50000;
+    public static final int TYPE_FOOTER = 50001;
+    public static final int TYPE_CHILD = 50002;
+/*
     public static final int TYPE_HEADER = R.integer.type_header;
     public static final int TYPE_FOOTER = R.integer.type_footer;
     public static final int TYPE_CHILD = R.integer.type_child;
+*/
 
     private OnHeaderClickListener mOnHeaderClickListener;
     private OnFooterClickListener mOnFooterClickListener;

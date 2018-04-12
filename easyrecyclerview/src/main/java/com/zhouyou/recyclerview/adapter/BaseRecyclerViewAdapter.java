@@ -21,6 +21,7 @@ import java.util.List;
  * 日期： 2016/8/25 10:29<br>
  * 版本： v3.0<br>
  */
+@SuppressWarnings("unchecked")
 public abstract class BaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<BH> {
     protected List<T> mList;
     protected Context mContext;
