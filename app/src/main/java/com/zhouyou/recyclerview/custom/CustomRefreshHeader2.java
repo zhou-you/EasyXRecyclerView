@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import com.zhouyou.recyclerview.refresh.BaseRefreshHeader;
 
 /**
- * <p>描述：定制了Clife动画头部动画</p>
+ * <p>描述：定制了自定义头部动画</p>
  * 这个实现方式和其它动画效果实现方式完全不一样，没用采用Canvas绘制<br/>
  * 
  *  <p>《方式二》</p>
@@ -23,12 +23,12 @@ import com.zhouyou.recyclerview.refresh.BaseRefreshHeader;
  * 版本： v2.0<br>
  *
  */
-public class ClifeRefreshHeader2 extends LinearLayout implements BaseRefreshHeader {
+public class CustomRefreshHeader2 extends LinearLayout implements BaseRefreshHeader {
     private LinearLayout mContainer;
     private int mState = STATE_NORMAL;
     public int mMeasuredHeight;
-    private CLifeAnimView mCLifeAnimView;
-    public ClifeRefreshHeader2(Context context) {
+    private CustomAnimView mCLifeAnimView;
+    public CustomRefreshHeader2(Context context) {
         super(context);
         initView();
     }
@@ -37,14 +37,14 @@ public class ClifeRefreshHeader2 extends LinearLayout implements BaseRefreshHead
      * @param context
      * @param attrs
      */
-    public ClifeRefreshHeader2(Context context, AttributeSet attrs) {
+    public CustomRefreshHeader2(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView();
     }
 
     private void initView() {
         // 初始情况，设置下拉刷新view高度为0
-        mCLifeAnimView = new CLifeAnimView(getContext());
+        mCLifeAnimView = new CustomAnimView(getContext());
         mContainer = new LinearLayout(getContext());
         LayoutParams lp = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         lp.setMargins(0, 0, 0, 0);
@@ -97,7 +97,7 @@ public class ClifeRefreshHeader2 extends LinearLayout implements BaseRefreshHead
         postDelayed(new Runnable() {
             @Override
             public void run() {
-                ClifeRefreshHeader2.this.reset();
+                CustomRefreshHeader2.this.reset();
             }
         },200);
     }
@@ -175,7 +175,7 @@ public class ClifeRefreshHeader2 extends LinearLayout implements BaseRefreshHead
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-                ClifeRefreshHeader2.this.setVisibleHeight((int) animation.getAnimatedValue());
+                CustomRefreshHeader2.this.setVisibleHeight((int) animation.getAnimatedValue());
             }
         });
         animator.start();

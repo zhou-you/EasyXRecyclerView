@@ -23,21 +23,21 @@ import com.zhouyou.recyclerviewsdk.R;
  * 日期： 2016/12/14 14:21<br>
  * 版本： v2.0<br>
  */
-public class CLifeAnimView extends LinearLayout {
+public class CustomAnimView extends LinearLayout {
     private ImageView mImageView;
     private AnimationDrawable mAnimationDrawable;
 
-    public CLifeAnimView(Context context) {
+    public CustomAnimView(Context context) {
         super(context);
         init(context,null);
     }
 
-    public CLifeAnimView(Context context, AttributeSet attrs) {
+    public CustomAnimView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context,attrs);
     }
 
-    public CLifeAnimView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CustomAnimView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context,attrs);
     }

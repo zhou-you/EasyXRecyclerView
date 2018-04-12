@@ -27,12 +27,12 @@ import com.zhouyou.recyclerviewsdk.R;
  * 版本： v2.0<br>
  *
  */
-public class ClifeRefreshHeader extends LinearLayout implements BaseRefreshHeader {
+public class CustomRefreshHeader extends LinearLayout implements BaseRefreshHeader {
     private LinearLayout mContainer;
     private SimpleViewSwitcher mProgressBar;
     private int mState = STATE_NORMAL;
     public int mMeasuredHeight;
-    public ClifeRefreshHeader(Context context) {
+    public CustomRefreshHeader(Context context) {
         super(context);
         initView();
     }
@@ -41,7 +41,7 @@ public class ClifeRefreshHeader extends LinearLayout implements BaseRefreshHeade
      * @param context
      * @param attrs
      */
-    public ClifeRefreshHeader(Context context, AttributeSet attrs) {
+    public CustomRefreshHeader(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView();
     }

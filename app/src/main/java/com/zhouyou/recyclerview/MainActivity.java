@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.zhouyou.recyclerview.anim.AnimationActivity;
 import com.zhouyou.recyclerview.bean.ExampleBean;
+import com.zhouyou.recyclerview.custom.CustomAnimActivity;
 import com.zhouyou.recyclerview.divider.DividerMainActivity;
 import com.zhouyou.recyclerview.drag.DragActivity;
 import com.zhouyou.recyclerview.group.GroupMainActivity;
@@ -105,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                         gotoActivity(LinearActivity.class);
                         break;
                     case 13:
-                        gotoActivity(ClifeActivity.class);
+                        gotoActivity(CustomAnimActivity.class);
                         break;
                    /* case 14:
                         gotoActivity(ChatActivityDemo.class);
@@ -216,8 +217,8 @@ public class MainActivity extends AppCompatActivity {
         list.add(bean13);
 
         ExampleBean bean14 = new ExampleBean();
-        bean14.setTitle("自定义Clife刷新动画");
-        bean14.setRemark("clife刷新动画终于上线了，还在持续维护修改中，期待最终版本吧！！");
+        bean14.setTitle("自定义刷新动画");
+        bean14.setRemark("外部自定义刷新动画和加载更多动画");
         bean14.setId(13);
         list.add(bean14);
 

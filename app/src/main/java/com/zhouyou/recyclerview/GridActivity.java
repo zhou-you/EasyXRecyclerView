@@ -17,6 +17,13 @@ import com.zhouyou.recyclerviewdemo.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <p>描述：格子布局  具体使用参考代码</p>
+ * 不满一屏也可以加载更多<br>
+ * 作者： zhouyou<br>
+ * 日期： 2016/10/27 16:24<br>
+ * 版本： v2.0<br>
+ */
 public class GridActivity extends BaseActivity {
     private com.zhouyou.recyclerview.XRecyclerView mRecyclerView;
     private GridAdapter mAdapter;
@@ -124,7 +131,7 @@ public class GridActivity extends BaseActivity {
         mAdapter.setOnItemClickListener(new BaseRecyclerViewAdapter.OnItemClickListener<TestBean>() {
             @Override
             public void onItemClick(View view, TestBean item, int position) {
-                Toast.makeText(getApplicationContext(),"我是item "+position,Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "我是item " + position, Toast.LENGTH_LONG).show();
             }
         });
     }

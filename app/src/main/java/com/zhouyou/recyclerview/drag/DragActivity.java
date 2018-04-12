@@ -92,7 +92,7 @@ public class DragActivity extends BaseActivity implements XRecyclerView.LoadingL
     }
 
     private List<String> generateData(int size) {
-        ArrayList<String> data = new ArrayList(size);
+        ArrayList<String> data = new ArrayList<String>(size);
         for (int i = 0; i < size; i++) {
             data.add("item " + i);
         }

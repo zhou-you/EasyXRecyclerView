@@ -1,4 +1,4 @@
-package com.zhouyou.recyclerview.view;
+package com.zhouyou.recyclerview.custom;
 
 import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
@@ -15,7 +15,14 @@ import android.widget.TextView;
 import com.zhouyou.recyclerview.refresh.BaseLoadingFooter;
 import com.zhouyou.recyclerviewdemo.R;
 
-
+/**
+ * <p>描述：定制了加载更多动画</p>
+ * 同时可以支持本库中自带的其它27种动画<br>
+ * <p>
+ * 作者： zhouyou<br>
+ * 日期： 2016/12/14 9:47<br>
+ * 版本： v2.0<br>
+ */
 public class ClifeLoadingMoreFooter extends LinearLayout implements BaseLoadingFooter {
     private int mState;
     private String loadingHint;
@@ -24,6 +31,7 @@ public class ClifeLoadingMoreFooter extends LinearLayout implements BaseLoadingF
     private AnimationDrawable mAnimationDrawable;
     private LinearLayout allLayout;
     private TextView mTextView;
+
     public ClifeLoadingMoreFooter(Context context) {
         super(context);
         initView();

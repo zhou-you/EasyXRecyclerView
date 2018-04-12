@@ -19,11 +19,6 @@ import com.zhouyou.recyclerviewdemo.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * description:ChatActivityDemo
- * Author:  howard gong
- * Create:  2017/6/8 10:31
- */
 public class ChatActivityDemo extends AppCompatActivity{
     private LinearLayout ll_input;
     private RelativeLayout rl_chat_content;

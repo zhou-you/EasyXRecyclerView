@@ -2,4 +2,4 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="false" android:drawable="@android:color/white" />
     <item android:state_pressed="true" android:drawable="@color/common_black_alpah22" />
-</selector><!-- From: file:/E:/CSleep/ClifeAllNew_Optimized/csleep/res/drawable/btn_common_click.xml --><!-- From: file:/E:/CSleep/ClifeAllNew_Optimized/csleep/build/intermediates/bundles/debug/res/drawable/btn_common_click.xml -->
+</selector>

@@ -70,7 +70,7 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.zhouyou.recyclerview.ClifeActivity"
+            android:name="com.zhouyou.recyclerview.custom.CustomAnimActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait">
         </activity>

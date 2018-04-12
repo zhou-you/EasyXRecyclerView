@@ -51,6 +51,15 @@ android {
             dirs 'libs'
         }
     }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            if (output.outputFile != null && output.outputFile.name.endsWith('.apk')) {
+                def name = "${rootDir}/apk/easyxrecyclerview_demo.apk"
+                output.outputFile = file(name)
+            }
+        }
+    }
 }
 
 dependencies {

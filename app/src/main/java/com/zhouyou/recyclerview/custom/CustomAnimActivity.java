@@ -1,4 +1,4 @@
-package com.zhouyou.recyclerview;
+package com.zhouyou.recyclerview.custom;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,10 +12,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.zhouyou.recyclerview.BaseActivity;
+import com.zhouyou.recyclerview.adapter.BaseRecyclerViewAdapter;
 import com.zhouyou.recyclerview.adapter.MyAdapter;
 import com.zhouyou.recyclerview.bean.TestBean;
-import com.zhouyou.recyclerview.adapter.BaseRecyclerViewAdapter;
-import com.zhouyou.recyclerview.custom.ClifeRefreshHeader2;
 import com.zhouyou.recyclerview.refresh.ProgressStyle;
 import com.zhouyou.recyclerviewdemo.R;
 
@@ -28,7 +28,7 @@ import java.util.List;
  * 日期： 2016/10/27 16:24<br>
  * 版本： v2.0<br>
  */
-public class ClifeActivity extends BaseActivity {
+public class CustomAnimActivity extends BaseActivity {
     private com.zhouyou.recyclerview.XRecyclerView mRecyclerView;
     private MyAdapter mAdapter;
     private int times = 0;
@@ -44,7 +44,7 @@ public class ClifeActivity extends BaseActivity {
         mRecyclerView.setLayoutManager(layoutManager);
 
 //        mRecyclerView.setRefreshHeader(new ArrowRefreshHeader(this));
-        mRecyclerView.setRefreshHeader(new ClifeRefreshHeader2(this));
+        mRecyclerView.setRefreshHeader(new CustomRefreshHeader2(this));
 //        mRecyclerView.setLoadingMoreFooter(new ClifeLoadingFooterDemo(this));
         mRecyclerView.setLoadingMoreProgressStyle(ProgressStyle.ClifeIndicator);
 //        mRecyclerView.setArrowImageView(R.mipmap.iconfont_downgrey);
