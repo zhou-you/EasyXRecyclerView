@@ -36,7 +36,6 @@
 ## 版本说明
 
 ### 当前版本
-
 [![release](https://img.shields.io/badge/release-V1.0.0-orange.svg)](https://github.com/zhou-you/EasyXRecyclerView/blob/master/update.md)
 
 ### build.gradle设置
