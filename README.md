@@ -35,11 +35,10 @@
 
 ## 鸣谢
 本库前身主要是以XRecyclerView为基础展开，借鉴和整合其它一些开源项目，再次感谢！
-
-[https://github.com/XRecyclerView](https://github.com/XRecyclerView)
-[https://github.com/supercwn/SuperRecycleView](https://github.com/supercwn/SuperRecycleView)
-[https://github.com/yqritc/RecyclerView-FlexibleDivider](https://github.com/yqritc/RecyclerView-FlexibleDivider)
-[https://github.com/donkingliang/GroupedRecyclerViewAdapter](https://github.com/donkingliang/GroupedRecyclerViewAdapter)
+- [https://github.com/XRecyclerView](https://github.com/XRecyclerView)
+- [https://github.com/supercwn/SuperRecycleView](https://github.com/supercwn/SuperRecycleView)
+- [https://github.com/yqritc/RecyclerView-FlexibleDivider](https://github.com/yqritc/RecyclerView-FlexibleDivider)
+- [https://github.com/donkingliang/GroupedRecyclerViewAdapter](https://github.com/donkingliang/GroupedRecyclerViewAdapter)
 
 ## 关于我
 [![github](https://img.shields.io/badge/GitHub-zhou--you-green.svg)](https://github.com/zhou-you)   [![csdn](https://img.shields.io/badge/CSDN-zhouy478319399-green.svg)](http://blog.csdn.net/zhouy478319399)
