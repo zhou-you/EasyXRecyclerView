@@ -35,6 +35,7 @@
 
 ## 鸣谢
 本库前身主要是以XRecyclerView为基础展开，借鉴和整合其它一些开源项目，再次感谢！
+
 [https://github.com/XRecyclerView](https://github.com/XRecyclerView)
 [https://github.com/supercwn/SuperRecycleView](https://github.com/supercwn/SuperRecycleView)
 [https://github.com/yqritc/RecyclerView-FlexibleDivider](https://github.com/yqritc/RecyclerView-FlexibleDivider)
