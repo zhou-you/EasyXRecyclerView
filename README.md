@@ -18,11 +18,23 @@
 - 支持状态页面，加载中、空页面、错误页面、内容页面切换
 - 支持自定义万能adapter、holder
 
+## Demo下载
+
+[![downloads](https://img.shields.io/badge/downloads-2.2M-blue.svg)](https://github.com/zhou-you/EasyXRecyclerView/blob/master/apk/easyxrecyclerview_demo.apk?raw=true)
+
+#### 扫码下载体验
+
+![](https://github.com/zhou-you/EasyXRecyclerView/blob/master/screenshot/down.png?raw=true)
+
 ## 演示（请star支持）
-![](https://github.com/zhou-you/EasyXRecyclerView/raw/master/screenshot/1.gif) ![](https://github.com/zhou-you/EasyXRecyclerView/raw/master/screenshot/3.gif)
+![](https://github.com/zhou-you/EasyXRecyclerView/raw/master/screenshot/1.gif) ![](https://github.com/zhou-you/EasyXRecyclerView/raw/master/screenshot/2.gif)
+![](https://github.com/zhou-you/EasyXRecyclerView/raw/master/screenshot/3.gif) ![](https://github.com/zhou-you/EasyXRecyclerView/raw/master/screenshot/4.gif)
+![](https://github.com/zhou-you/EasyXRecyclerView/raw/master/screenshot/5.gif) ![](https://github.com/zhou-you/EasyXRecyclerView/raw/master/screenshot/6.gif)
+![](https://github.com/zhou-you/EasyXRecyclerView/raw/master/screenshot/7.gif) ![](https://github.com/zhou-you/EasyXRecyclerView/raw/master/screenshot/8.gif)
+![](https://github.com/zhou-you/EasyXRecyclerView/raw/master/screenshot/9.gif) ![](https://github.com/zhou-you/EasyXRecyclerView/raw/master/screenshot/10.gif)
 
 ## 鸣谢
-本库前身主要是以XRecyclerView为基础展开，借鉴和整合其它一些开源项目，再次特别感谢！
+本库前身主要是以XRecyclerView为基础展开，借鉴和整合其它一些开源项目，再次感谢！
 [https://github.com/XRecyclerView](https://github.com/XRecyclerView)
 [https://github.com/supercwn/SuperRecycleView](https://github.com/supercwn/SuperRecycleView)
 [https://github.com/yqritc/RecyclerView-FlexibleDivider](https://github.com/yqritc/RecyclerView-FlexibleDivider)
