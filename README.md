@@ -38,6 +38,7 @@
 ### 当前版本
 
 [![release](https://img.shields.io/badge/release-V1.0.0-orange.svg)](https://github.com/zhou-you/EasyXRecyclerView/blob/master/update.md)
+
 ### build.gradle设置
 ```
 dependencies {
@@ -46,7 +47,7 @@ dependencies {
 ```
 想查看所有版本，请点击下面地址。
 
-[![jcenter](https://img.shields.io/badge/Jcenter-Latest%20Release-orange.svg)](https://jcenter.bintray.com/com/zhouyou/EasyXRecyclerView/)
+[![jcenter](https://img.shields.io/badge/Jcenter-Latest%20Release-orange.svg)](https://jcenter.bintray.com/com/zhouyou/easyrecyclerview/)
 
 ## 鸣谢
 本库前身主要是以XRecyclerView为基础展开，借鉴和整合其它一些开源项目，再次感谢！
