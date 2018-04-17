@@ -53,7 +53,7 @@
                 android:background="@color/white"
                 android:tag="sticky-nonconstant">
 
-                <com.zhouyou.smarttab.SmartTabLayout
+                <com.het.smarttab.SmartTabLayout
                     android:id="@+id/smartTabLayout"
                     android:layout_width="match_parent"
                     android:layout_height="42dp"
@@ -71,7 +71,7 @@
                     app:stl_underlineThickness="1px"/>
             </LinearLayout>
 
-            <com.zhouyou.smarttab.viewpager.SlidingViewPager
+            <com.het.smarttab.viewpager.SlidingViewPager
                 android:id="@+id/slidingViewPager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

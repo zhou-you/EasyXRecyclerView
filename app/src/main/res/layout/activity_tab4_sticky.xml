@@ -37,7 +37,7 @@
         android:background="@color/white"
         >
 
-        <com.zhouyou.smarttab.SmartTabLayout
+        <com.het.smarttab.SmartTabLayout
             android:id="@+id/smartTabLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

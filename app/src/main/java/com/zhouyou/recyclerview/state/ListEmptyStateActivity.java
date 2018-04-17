@@ -97,7 +97,7 @@ public class ListEmptyStateActivity extends BaseActivity {
                 }
                 mAdapter.setListAll(list);
             }
-        }, 5000);
+        }, 2000);
 
         //设置item事件监听
         mAdapter.setOnItemClickListener(new BaseRecyclerViewAdapter.OnItemClickListener<String>() {

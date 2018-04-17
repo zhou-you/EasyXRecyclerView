@@ -83,7 +83,7 @@ public class GridEmptyStateActivity extends BaseActivity {
                 }
                 mAdapter.setListAll(list);
             }
-        }, 5000);
+        }, 2000);
 
         StateGridLayoutManager layoutManager = new StateGridLayoutManager(this,3);
         //切记！切记！切记！
