@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.zhouyou.recyclerview.refresh.BaseRefreshHeader;
+import com.zhouyou.recyclerview.refresh.IRefreshHeader;
 
 /**
  * <p>描述：定制了自定义头部动画</p>
@@ -23,7 +23,7 @@ import com.zhouyou.recyclerview.refresh.BaseRefreshHeader;
  * 版本： v2.0<br>
  *
  */
-public class CustomRefreshHeader2 extends LinearLayout implements BaseRefreshHeader {
+public class CustomRefreshHeader2 extends LinearLayout implements IRefreshHeader {
     private LinearLayout mContainer;
     private int mState = STATE_NORMAL;
     public int mMeasuredHeight;

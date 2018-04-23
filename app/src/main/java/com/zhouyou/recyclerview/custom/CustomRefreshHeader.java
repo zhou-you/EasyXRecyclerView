@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import com.zhouyou.recyclerview.progressindicator.AVLoadingIndicatorView;
-import com.zhouyou.recyclerview.refresh.BaseRefreshHeader;
+import com.zhouyou.recyclerview.refresh.IRefreshHeader;
 import com.zhouyou.recyclerview.refresh.ProgressStyle;
 import com.zhouyou.recyclerview.refresh.SimpleViewSwitcher;
 import com.zhouyou.recyclerviewsdk.R;
@@ -27,7 +27,7 @@ import com.zhouyou.recyclerviewsdk.R;
  * 版本： v2.0<br>
  *
  */
-public class CustomRefreshHeader extends LinearLayout implements BaseRefreshHeader {
+public class CustomRefreshHeader extends LinearLayout implements IRefreshHeader {
     private LinearLayout mContainer;
     private SimpleViewSwitcher mProgressBar;
     private int mState = STATE_NORMAL;

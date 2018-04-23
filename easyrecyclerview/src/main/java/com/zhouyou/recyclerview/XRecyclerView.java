@@ -16,7 +16,7 @@ import android.view.ViewParent;
 
 import com.zhouyou.recyclerview.refresh.ArrowRefreshHeader;
 import com.zhouyou.recyclerview.refresh.BaseLoadingFooter;
-import com.zhouyou.recyclerview.refresh.BaseRefreshHeader;
+import com.zhouyou.recyclerview.refresh.IRefreshHeader;
 import com.zhouyou.recyclerview.listener.AppBarStateChangeListener;
 import com.zhouyou.recyclerview.refresh.LoadingMoreFooter;
 import com.zhouyou.recyclerview.refresh.ProgressStyle;
@@ -59,7 +59,7 @@ public class XRecyclerView extends RecyclerView {
     private float mLastY = -1;
     private static final float DRAG_RATE = 3;
     private LoadingListener mLoadingListener;
-    private BaseRefreshHeader mRefreshHeader;
+    private IRefreshHeader mRefreshHeader;
     private BaseLoadingFooter mRefreshFooter;
     private boolean pullRefreshEnabled = true;
     private boolean loadingMoreEnabled = true;
@@ -247,7 +247,7 @@ public class XRecyclerView extends RecyclerView {
         setNoMore(false);
     }
 
-    public void setRefreshHeader(BaseRefreshHeader refreshHeader) {
+    public void setRefreshHeader(IRefreshHeader refreshHeader) {
         mRefreshHeader = refreshHeader;
     }
 
@@ -409,7 +409,7 @@ public class XRecyclerView extends RecyclerView {
             if (layoutManager.getChildCount() > 0
                     && lastVisibleItemPosition >= layoutManager.getItemCount() - 1 
                    /* && layoutManager.getItemCount() > layoutManager.getChildCount() */ //解决屏幕不满足一屏无法加载更多的问题
-                    && !isNoMore && isEnabledScroll && mRefreshHeader.getState() < BaseRefreshHeader.STATE_REFRESHING) {
+                    && !isNoMore && isEnabledScroll && mRefreshHeader.getState() < IRefreshHeader.STATE_REFRESHING) {
                 isLoadingData = true;
                 if (mRefreshFooter instanceof BaseLoadingFooter) {
                     mRefreshFooter.setState(LoadingMoreFooter.STATE_LOADING);
@@ -750,7 +750,7 @@ public class XRecyclerView extends RecyclerView {
 
     public void setRefreshing(boolean refreshing) {
         if (refreshing && pullRefreshEnabled && mLoadingListener != null) {
-            mRefreshHeader.setState(BaseRefreshHeader.STATE_REFRESHING);
+            mRefreshHeader.setState(IRefreshHeader.STATE_REFRESHING);
             mRefreshHeader.onMove(mRefreshHeader.getHeaderView().getMeasuredHeight());
             mLoadingListener.onRefresh();
         }

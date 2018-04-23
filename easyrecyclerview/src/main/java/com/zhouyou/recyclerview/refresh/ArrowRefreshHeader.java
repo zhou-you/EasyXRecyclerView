@@ -19,7 +19,7 @@ import com.zhouyou.recyclerviewsdk.R;
 
 import java.util.Date;
 
-public class ArrowRefreshHeader extends LinearLayout implements BaseRefreshHeader {
+public class ArrowRefreshHeader extends LinearLayout implements IRefreshHeader {
 
     private LinearLayout mContainer;
     private ImageView mArrowImageView;
