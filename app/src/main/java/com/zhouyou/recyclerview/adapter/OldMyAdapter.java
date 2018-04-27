@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 /**
  * 这是一种比较传统的写法，亲代码是不是很多啊！！！！！！
+ * 请看：MyAdapter里面的写法
  */
 public class OldMyAdapter extends RecyclerView.Adapter<OldMyAdapter.ViewHolder> {
     public ArrayList<String> datas = null;
