@@ -23,7 +23,7 @@ import java.util.List;
  * 版本： v2.0<br>
  */
 @SuppressWarnings("unchecked")
-public abstract class HelpRecyclerViewDragAdapter<T> extends HelperRecyclerViewAdapter<T> {
+public abstract class HelperRecyclerViewDragAdapter<T> extends HelperRecyclerViewAdapter<T> {
 
     private static final int NO_TOGGLE_VIEW = 0;
     private int mToggleViewId = NO_TOGGLE_VIEW;
@@ -36,15 +36,15 @@ public abstract class HelpRecyclerViewDragAdapter<T> extends HelperRecyclerViewA
     private View.OnTouchListener mOnToggleViewTouchListener;
     private View.OnLongClickListener mOnToggleViewLongClickListener;
 
-    public HelpRecyclerViewDragAdapter(List<T> data, Context context, int... layoutId) {
+    public HelperRecyclerViewDragAdapter(List<T> data, Context context, int... layoutId) {
         super(data, context, layoutId);
     }
 
-    public HelpRecyclerViewDragAdapter(Context context, int... layoutIds) {
+    public HelperRecyclerViewDragAdapter(Context context, int... layoutIds) {
         super(context, layoutIds);
     }
 
-    public HelpRecyclerViewDragAdapter(List<T> mList, Context context) {
+    public HelperRecyclerViewDragAdapter(List<T> mList, Context context) {
         super(mList, context);
     }
 

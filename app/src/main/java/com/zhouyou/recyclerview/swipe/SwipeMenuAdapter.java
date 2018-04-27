@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.zhouyou.recyclerview.bean.MultipleItemBean;
-import com.zhouyou.recyclerview.adapter.HelpRecyclerViewDragAdapter;
+import com.zhouyou.recyclerview.adapter.HelperRecyclerViewDragAdapter;
 import com.zhouyou.recyclerview.adapter.HelperRecyclerViewHolder;
 import com.zhouyou.recyclerview.swipemenu.SwipeMenuLayout;
 import com.zhouyou.recyclerview.util.MakePicUtil;
@@ -20,7 +20,7 @@ import static com.zhouyou.recyclerviewdemo.R.id.image_iv;
  * 日期： 2016/11/1 16:24<br>
  * 版本： v2.0<br>
  */
-public class SwipeMenuAdapter extends HelpRecyclerViewDragAdapter<MultipleItemBean> {
+public class SwipeMenuAdapter extends HelperRecyclerViewDragAdapter<MultipleItemBean> {
     public SwipeMenuAdapter(Context context) {
         super(context, R.layout.adapter_swipemenu1_layout,R.layout.adapter_swipemenu_layout);
     }

@@ -34,10 +34,10 @@ public abstract class HelperRecyclerViewAdapter<T> extends BaseRecyclerViewAdapt
         super(mList, context);
     }
 
-    
+
     @Override
     protected BaseRecyclerViewHolder createViewHolder(View view, int layoutId) {
-        return new HelperRecyclerViewHolder(view,layoutId);
+        return new HelperRecyclerViewHolder(view, layoutId);
     }
 
     @Override
@@ -67,7 +67,7 @@ public abstract class HelperRecyclerViewAdapter<T> extends BaseRecyclerViewAdapt
 
     @Override
     public boolean isEnabled(int position) {
-        return position < mList.size();
+        return position >= 0 && position < mList.size();
     }
 
     @Override
@@ -130,6 +130,7 @@ public abstract class HelperRecyclerViewAdapter<T> extends BaseRecyclerViewAdapt
 
     @Override
     public void add(int startPosition, T data) {
+        if (mList == null || data == null) return;
         mList.add(startPosition, data);
         notifyDataSetChanged();
     }
@@ -148,6 +149,7 @@ public abstract class HelperRecyclerViewAdapter<T> extends BaseRecyclerViewAdapt
 
     @Override
     public void alterObj(int index, T data) {
+        if (mList == null || data == null) return;
         mList.set(index, data);
         notifyDataSetChanged();
     }
@@ -164,6 +166,7 @@ public abstract class HelperRecyclerViewAdapter<T> extends BaseRecyclerViewAdapt
 
     @Override
     public void removeToIndex(int index) {
+        if (mList == null) return;
         mList.remove(index);
         notifyDataSetChanged();
     }
@@ -171,7 +174,8 @@ public abstract class HelperRecyclerViewAdapter<T> extends BaseRecyclerViewAdapt
 
     @Override
     public void replaceAll(List<T> data) {
-        mList.clear();
+        if (mList != null)
+            mList.clear();
         addAll(0, data);
     }
 
@@ -189,7 +193,7 @@ public abstract class HelperRecyclerViewAdapter<T> extends BaseRecyclerViewAdapt
 
     @Override
     public void clear() {
-        if(mList!=null){
+        if (mList != null) {
             mList.clear();
             notifyDataSetChanged();
         }
@@ -198,6 +202,7 @@ public abstract class HelperRecyclerViewAdapter<T> extends BaseRecyclerViewAdapt
 
     @Override
     public boolean contains(T data) {
+        if (mList == null || mList.isEmpty()) return false;
         return mList.contains(data);
     }
 

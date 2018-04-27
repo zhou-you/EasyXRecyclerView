@@ -51,10 +51,10 @@ public interface DataHelper<T> {
     /**
      * 添加单个数据到指定位置
      *
-     * @param startPosition 数据添加的位置
+     * @param position 数据添加的位置
      * @param data          数据
      */
-    void add(int startPosition, T data);
+    void add(int position, T data);
 
     /**
      * 获取index对于的数据

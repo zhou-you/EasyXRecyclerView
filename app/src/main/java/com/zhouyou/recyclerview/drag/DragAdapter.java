@@ -2,7 +2,7 @@ package com.zhouyou.recyclerview.drag;
 
 import android.content.Context;
 
-import com.zhouyou.recyclerview.adapter.HelpRecyclerViewDragAdapter;
+import com.zhouyou.recyclerview.adapter.HelperRecyclerViewDragAdapter;
 import com.zhouyou.recyclerview.adapter.HelperRecyclerViewHolder;
 import com.zhouyou.recyclerview.util.MakePicUtil;
 import com.zhouyou.recyclerviewdemo.R;
@@ -15,7 +15,7 @@ import com.zhouyou.recyclerviewdemo.R;
  * 日期： 2016/10/31 16:24<br>
  * 版本： v2.0<br>
  */
-public class DragAdapter extends HelpRecyclerViewDragAdapter<String> {
+public class DragAdapter extends HelperRecyclerViewDragAdapter<String> {
     public DragAdapter(Context context) {
         super(context, R.layout.adapter_draggable_layout);
     }

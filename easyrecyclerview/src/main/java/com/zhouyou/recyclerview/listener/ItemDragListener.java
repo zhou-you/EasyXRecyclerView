@@ -4,7 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
 import com.zhouyou.recyclerview.XRecyclerView;
-import com.zhouyou.recyclerview.adapter.HelpRecyclerViewDragAdapter;
+import com.zhouyou.recyclerview.adapter.HelperRecyclerViewDragAdapter;
 import com.zhouyou.recyclerviewsdk.R;
 
 /**
@@ -14,7 +14,7 @@ import com.zhouyou.recyclerviewsdk.R;
  * 版本： v1.0<br>
  */
 public class ItemDragListener extends ItemTouchHelper.Callback {
-    HelpRecyclerViewDragAdapter mAdapter;
+    HelperRecyclerViewDragAdapter mAdapter;
 
     float mMoveThreshold = 0.1f;
     float mSwipeThreshold = 0.7f;
@@ -22,7 +22,7 @@ public class ItemDragListener extends ItemTouchHelper.Callback {
     int mDragMoveFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN | ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
     int mSwipeMoveFlags = ItemTouchHelper.END;
 
-    public ItemDragListener(HelpRecyclerViewDragAdapter adapter) {
+    public ItemDragListener(HelperRecyclerViewDragAdapter adapter) {
         mAdapter = adapter;
     }
 
