@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--布局外层必须用SwipeMenuLayout-->
 <com.zhouyou.recyclerview.swipemenu.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content">
-
+    <!--内容布局id必须用smContentView，不能自定义id名称，否则找不到-->
     <include
         android:id="@+id/smContentView"
         layout="@layout/item_swipe_menu_content" />
-
+    <!--菜单布局id必须用smMenuView，不能自定义id名称，否则找不到-->
     <include
         android:id="@+id/smMenuView"
         layout="@layout/item_swipe_menu1" />
