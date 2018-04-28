@@ -13,6 +13,7 @@ import java.util.List;
  * 日期： 2016/8/25 10:29<br>
  * 版本： v2.0<br>
  */
+@SuppressWarnings("unchecked")
 public abstract class HelperRecyclerViewAdapter<T> extends BaseRecyclerViewAdapter<T>
         implements DataHelper<T> {
 
