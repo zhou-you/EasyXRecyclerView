@@ -18,7 +18,7 @@ import android.view.ViewGroup;
  * @version v1.0
  * @date 2015-8-17 下午8:55:40
  */
-@SuppressWarnings("unchecked")
+@SuppressWarnings(value={"unchecked", "deprecation"})
 public abstract class BaseFragment extends Fragment {
     public Context mContext;
     public Resources mResources;

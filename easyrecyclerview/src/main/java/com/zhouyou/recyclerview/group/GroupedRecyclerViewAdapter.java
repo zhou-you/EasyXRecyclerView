@@ -26,6 +26,7 @@ import java.util.List;
  * 日期： 2018/1/30 14:28 <br>
  * 版本： v1.0<br>
  */
+@SuppressWarnings(value={"unchecked", "deprecation"})
 public abstract class GroupedRecyclerViewAdapter<T>
         extends RecyclerView.Adapter<HelperRecyclerViewHolder> {
     private List<T> mGroups;

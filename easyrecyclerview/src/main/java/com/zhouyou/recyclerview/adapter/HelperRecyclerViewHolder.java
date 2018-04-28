@@ -27,6 +27,7 @@ import android.widget.TextView;
  * 日期： 2016/8/25 10:29<br>
  * 版本： v2.0<br>
  */
+@SuppressWarnings(value={"unchecked", "deprecation"})
 public class HelperRecyclerViewHolder extends BaseRecyclerViewHolder implements ViewHelper.RecyclerView<HelperRecyclerViewHolder> {
     public HelperRecyclerViewHolder(View itemView, int layoutId) {
         super(itemView, layoutId);

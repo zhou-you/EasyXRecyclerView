@@ -19,7 +19,7 @@ import java.util.List;
  * 日期： 2016/8/25 10:29<br>
  * 版本： v2.0<br>
  */
-@SuppressWarnings("unchecked")
+@SuppressWarnings(value={"unchecked", "deprecation"})
 public abstract class HelperStateRecyclerViewAdapter<T> extends HelperRecyclerViewAdapter<T> {
     @IntDef({STATE_NORMAL, STATE_LOADING, STATE_EMPTY, STATE_ERROR})
     @Retention(RetentionPolicy.SOURCE)

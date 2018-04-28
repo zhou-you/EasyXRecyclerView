@@ -14,7 +14,7 @@ import java.util.List;
  * 日期： 2016/11/1 11:29<br>
  * 版本： v2.0<br>
  */
-@SuppressWarnings("unchecked")
+@SuppressWarnings(value={"unchecked", "deprecation"})
 public abstract class HelperRecyclerViewAnimAdapter<T> extends HelperRecyclerViewAdapter {
 
     private AnimationType mAnimationType;
@@ -36,6 +36,7 @@ public abstract class HelperRecyclerViewAnimAdapter<T> extends HelperRecyclerVie
         super(context);
     }
 
+    @SuppressWarnings("deprecated")
     public HelperRecyclerViewAnimAdapter(List data, Context context) {
         super(data, context);
     }

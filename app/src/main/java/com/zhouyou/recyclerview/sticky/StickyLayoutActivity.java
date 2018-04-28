@@ -22,6 +22,7 @@ import com.zhouyou.recyclerviewdemo.R;
  * 日期： 2017/12/18 10:48 <br>
  * 版本： v1.0<br>
  */
+@SuppressWarnings(value={"unchecked", "deprecation"})
 public class StickyLayoutActivity extends BaseActivity {
 
     @Override

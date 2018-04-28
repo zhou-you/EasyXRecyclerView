@@ -47,6 +47,7 @@ import java.util.List;
  * 提供了面向接口编程定制header的功能，去掉了程序中默认的ArrowRefreshHeader
  * 修改为接口BaseRefreshHeader。
  */
+@SuppressWarnings("unchecked")
 public class XRecyclerView extends RecyclerView {
     private Sections listener;
     private boolean isLoadingData = false;

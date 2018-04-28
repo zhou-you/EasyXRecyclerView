@@ -22,7 +22,7 @@ import java.util.List;
  * 日期： 2016/11/1 10:29<br>
  * 版本： v2.0<br>
  */
-@SuppressWarnings("unchecked")
+@SuppressWarnings(value={"unchecked", "deprecation"})
 public abstract class HelperRecyclerViewDragAdapter<T> extends HelperRecyclerViewAdapter<T> {
 
     private static final int NO_TOGGLE_VIEW = 0;
