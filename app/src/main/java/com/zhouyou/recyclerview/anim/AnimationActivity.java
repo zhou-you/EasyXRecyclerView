@@ -22,6 +22,7 @@ import java.util.List;
  * 日期： 2016/10/27 16:24<br>
  * 版本： v2.0<br>
  */
+@SuppressWarnings("unchecked")
 public class AnimationActivity extends BaseActivity {
 
     private XRecyclerView superRecyclerView;

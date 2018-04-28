@@ -10,9 +10,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.VelocityTracker;
 import android.view.View;
-import android.view.ViewConfiguration;
 import android.view.ViewGroup;
-import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
 import android.widget.OverScroller;
 
@@ -137,7 +135,7 @@ public class StickyNavLayout extends LinearLayout implements NestedScrollingPare
         final int topHeight = mTop.getHeight();
         if (mOffsetAnimator == null) {
             mOffsetAnimator = new ValueAnimator();
-            mOffsetAnimator.setInterpolator(mInterpolator);
+            //mOffsetAnimator.setInterpolator(mInterpolator);
             mOffsetAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
@@ -173,23 +171,23 @@ public class StickyNavLayout extends LinearLayout implements NestedScrollingPare
     private OverScroller mScroller;
     private VelocityTracker mVelocityTracker;
     private ValueAnimator mOffsetAnimator;
-    private Interpolator mInterpolator;
+    /*private Interpolator mInterpolator;
     private int mTouchSlop;
     private int mMaximumVelocity, mMinimumVelocity;
 
     private float mLastY;
-    private boolean mDragging;
+    private boolean mDragging;*/
 
     public StickyNavLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         setOrientation(LinearLayout.VERTICAL);
 
         mScroller = new OverScroller(context);
-        mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
+        /*mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
         mMaximumVelocity = ViewConfiguration.get(context)
                 .getScaledMaximumFlingVelocity();
         mMinimumVelocity = ViewConfiguration.get(context)
-                .getScaledMinimumFlingVelocity();
+                .getScaledMinimumFlingVelocity();*/
 
     }
 
@@ -205,8 +203,7 @@ public class StickyNavLayout extends LinearLayout implements NestedScrollingPare
             mVelocityTracker = null;
         }
     }
-
-
+    
 //    @Override
 //    public boolean onTouchEvent(MotionEvent event)
 //    {
@@ -289,8 +286,7 @@ public class StickyNavLayout extends LinearLayout implements NestedScrollingPare
         super.onSizeChanged(w, h, oldw, oldh);
         mTopViewHeight = mTop.getMeasuredHeight();
     }
-
-
+    
     public void fling(int velocityY) {
         mScroller.fling(0, getScrollY(), 0, velocityY, 0, 0, 0, mTopViewHeight);
         invalidate();
@@ -316,6 +312,4 @@ public class StickyNavLayout extends LinearLayout implements NestedScrollingPare
             invalidate();
         }
     }
-
-
 }
