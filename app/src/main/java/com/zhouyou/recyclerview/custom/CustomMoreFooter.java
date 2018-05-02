@@ -35,7 +35,7 @@ public class CustomMoreFooter extends BaseMoreFooter {
 
     @Override
     protected void initView() {
-        super.initView();//父类是有某人居中显示功能，如果不需要就去掉super.initView();
+        super.initView();//有居中显示功能，如果不需要就去掉super.initView();
         allLayout = (LinearLayout) LayoutInflater.from(getContext()).inflate(R.layout.pull_to_refresh_clife, null);
         ImageView imageView = (ImageView) allLayout.findViewById(R.id.lodimg);
         imageView.setImageResource(R.drawable.icon_loading_animation);
