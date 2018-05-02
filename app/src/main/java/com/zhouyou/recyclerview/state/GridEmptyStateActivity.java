@@ -85,6 +85,7 @@ public class GridEmptyStateActivity extends BaseActivity {
             }
         }, 2000);
 
+        //如果用网格Manager,必须用StateGridLayoutManager，否则Grid状态页面会不起作用
         StateGridLayoutManager layoutManager = new StateGridLayoutManager(this,3);
         //切记！切记！切记！
         //setLayoutManager方法一定要放在setAdapter之后，否则LayoutManager是GridLayoutManager的时候尾部脚显示错误

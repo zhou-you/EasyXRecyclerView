@@ -36,22 +36,37 @@ public class EmptyStateAdapter extends HelperStateRecyclerViewAdapter<String> {
 
     @Override
     public View getEmptyView(ViewGroup parent) {
+        //空页面内容布局
         return mLInflater.inflate(R.layout.view_state_empty, parent, false);
     }
 
     @Override
     public View getErrorView(ViewGroup parent) {
+        //错误页面布局
         return mLInflater.inflate(R.layout.view_state_error, parent, false);
     }
 
     @Override
     public View getLoadingView(ViewGroup parent) {
+        //加载中页面布局
         return mLInflater.inflate(R.layout.view_state_loading, parent, false);
     }
 
+    //onBindEmptyViewHolder、onBindErrorViewHolder、onBindLoadingViewHolder根据需要进行选择是否实现。
     @Override
     public void onBindEmptyViewHolder(HelperRecyclerViewHolder holder) {
         //修改空页面内容
         holder.setText(R.id.tv_empty_view, "我更新了空页面内容");
     }
+
+    
+   /* @Override
+    public void onBindErrorViewHolder(HelperRecyclerViewHolder holder) {
+        super.onBindErrorViewHolder(holder);
+    }*/
+
+   /* @Override
+    public void onBindLoadingViewHolder(HelperRecyclerViewHolder holder) {
+        super.onBindLoadingViewHolder(holder);
+    }*/
 }
