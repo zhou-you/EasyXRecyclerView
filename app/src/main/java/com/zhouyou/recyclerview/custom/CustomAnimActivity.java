@@ -43,7 +43,6 @@ public class CustomAnimActivity extends BaseActivity {
 //        layoutManager.setStackFromEnd(true);
         mRecyclerView.setLayoutManager(layoutManager);
 
-//        mRecyclerView.setRefreshHeader(new ArrowRefreshHeader(this));
         mRecyclerView.setRefreshHeader(new CustomRefreshHeader2(this));
 //        mRecyclerView.setLoadingMoreFooter(new ClifeLoadingFooterDemo(this));
         mRecyclerView.setLoadingMoreProgressStyle(ProgressStyle.ClifeIndicator);

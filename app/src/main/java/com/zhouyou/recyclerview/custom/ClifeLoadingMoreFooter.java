@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.zhouyou.recyclerview.refresh.BaseLoadingFooter;
+import com.zhouyou.recyclerview.refresh.IRefreshFooter;
 import com.zhouyou.recyclerviewdemo.R;
 
 /**
@@ -23,7 +23,7 @@ import com.zhouyou.recyclerviewdemo.R;
  * 日期： 2016/12/14 9:47<br>
  * 版本： v2.0<br>
  */
-public class ClifeLoadingMoreFooter extends LinearLayout implements BaseLoadingFooter {
+public class ClifeLoadingMoreFooter extends LinearLayout implements IRefreshFooter {
     private int mState;
     private String loadingHint;
     private String noMoreHint;

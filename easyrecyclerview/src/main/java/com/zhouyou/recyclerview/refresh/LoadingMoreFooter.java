@@ -14,7 +14,7 @@ import com.zhouyou.recyclerview.progressindicator.AVLoadingIndicatorView;
 import com.zhouyou.recyclerviewsdk.R;
 
 
-public class LoadingMoreFooter extends LinearLayout implements BaseLoadingFooter {
+public class LoadingMoreFooter extends LinearLayout implements IRefreshFooter {
     private SimpleViewSwitcher progressCon;
     private TextView mText;
     private int mState;
