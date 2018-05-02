@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <p>描述：（这里用一句话描述这个类的作用)</p>
+ * <p>描述：适配器分组</p>
  * 通用的分组列表Adapter。通过它可以很方便的实现列表的分组效果。
  * 这个类提供了一系列的对列表的更新、删除和插入等操作的方法。
  * 使用者要使用这些方法的列表进行操作，而不要直接使用RecyclerView.Adapter的方法。

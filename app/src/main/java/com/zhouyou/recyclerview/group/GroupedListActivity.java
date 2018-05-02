@@ -48,32 +48,32 @@ public class GroupedListActivity extends BaseActivity {
                 .startSkipCount(2)//设置跳过开头的2条数据不要分割线
                 .endSkipCount(2)//设置跳过结尾的2条数据不要分割线
                 .build());
-        GroupedListAdapter adapter = new GroupedListAdapter(this, GroupModel.getGroups(10, 5));
-        adapter.setOnHeaderClickListener(new com.zhouyou.recyclerview.group.GroupedRecyclerViewAdapter.OnHeaderClickListener<GroupBean>() {
-            @Override
-            public void onHeaderClick(com.zhouyou.recyclerview.group.GroupedRecyclerViewAdapter adapter, HelperRecyclerViewHolder holder, int groupPosition, GroupBean item) {
-                Toast.makeText(GroupedListActivity.this, "组头：groupPosition = " + groupPosition,
-                        Toast.LENGTH_LONG).show();
-            }
-        });
-        adapter.setOnFooterClickListener(new com.zhouyou.recyclerview.group.GroupedRecyclerViewAdapter.OnFooterClickListener<GroupBean>() {
-            @Override
-            public void onFooterClick(com.zhouyou.recyclerview.group.GroupedRecyclerViewAdapter adapter, HelperRecyclerViewHolder holder,
-                                      int groupPosition, GroupBean item) {
-                Toast.makeText(GroupedListActivity.this, "组尾：groupPosition = " + groupPosition,
-                        Toast.LENGTH_LONG).show();
-            }
-        });
-        adapter.setOnChildClickListener(new com.zhouyou.recyclerview.group.GroupedRecyclerViewAdapter.OnChildClickListener<GroupBean>() {
-            @Override
-            public void onChildClick(com.zhouyou.recyclerview.group.GroupedRecyclerViewAdapter adapter, HelperRecyclerViewHolder holder,
-                                     int groupPosition, int childPosition, GroupBean item) {
-                Toast.makeText(GroupedListActivity.this, "子项：groupPosition = " + groupPosition
-                                + ", childPosition = " + childPosition,
-                        Toast.LENGTH_LONG).show();
-            }
-        });
-        rvList.setAdapter(adapter);
+                GroupedListAdapter adapter = new GroupedListAdapter(this, GroupModel.getGroups(10, 5));
+                adapter.setOnHeaderClickListener(new com.zhouyou.recyclerview.group.GroupedRecyclerViewAdapter.OnHeaderClickListener<GroupBean>() {
+                    @Override
+                    public void onHeaderClick(com.zhouyou.recyclerview.group.GroupedRecyclerViewAdapter adapter, HelperRecyclerViewHolder holder, int groupPosition, GroupBean item) {
+                        Toast.makeText(GroupedListActivity.this, "组头：groupPosition = " + groupPosition,
+                                Toast.LENGTH_LONG).show();
+                    }
+                });
+                adapter.setOnFooterClickListener(new com.zhouyou.recyclerview.group.GroupedRecyclerViewAdapter.OnFooterClickListener<GroupBean>() {
+                    @Override
+                    public void onFooterClick(com.zhouyou.recyclerview.group.GroupedRecyclerViewAdapter adapter, HelperRecyclerViewHolder holder,
+                                              int groupPosition, GroupBean item) {
+                        Toast.makeText(GroupedListActivity.this, "组尾：groupPosition = " + groupPosition,
+                                Toast.LENGTH_LONG).show();
+                    }
+                });
+                adapter.setOnChildClickListener(new com.zhouyou.recyclerview.group.GroupedRecyclerViewAdapter.OnChildClickListener<GroupBean>() {
+                    @Override
+                    public void onChildClick(com.zhouyou.recyclerview.group.GroupedRecyclerViewAdapter adapter, HelperRecyclerViewHolder holder,
+                                             int groupPosition, int childPosition, GroupBean item) {
+                        Toast.makeText(GroupedListActivity.this, "子项：groupPosition = " + groupPosition
+                                        + ", childPosition = " + childPosition,
+                                Toast.LENGTH_LONG).show();
+                    }
+                });
+                rvList.setAdapter(adapter);
 
     }
 }
