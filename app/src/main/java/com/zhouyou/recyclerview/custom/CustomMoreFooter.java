@@ -2,54 +2,40 @@ package com.zhouyou.recyclerview.custom;
 
 import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.zhouyou.recyclerview.refresh.IRefreshFooter;
+import com.zhouyou.recyclerview.refresh.BaseMoreFooter;
 import com.zhouyou.recyclerviewdemo.R;
 
 /**
  * <p>描述：定制了加载更多动画</p>
- * 同时可以支持本库中自带的其它27种动画<br>
+ * 
  * <p>
  * 作者： zhouyou<br>
  * 日期： 2016/12/14 9:47<br>
  * 版本： v2.0<br>
  */
-public class ClifeLoadingMoreFooter extends LinearLayout implements IRefreshFooter {
-    private int mState;
-    private String loadingHint;
-    private String noMoreHint;
-    private String loadingDoneHint;
+public class CustomMoreFooter extends BaseMoreFooter {
     private AnimationDrawable mAnimationDrawable;
     private LinearLayout allLayout;
     private TextView mTextView;
 
-    public ClifeLoadingMoreFooter(Context context) {
+    public CustomMoreFooter(Context context) {
         super(context);
-        initView();
     }
 
-    /**
-     * @param context
-     * @param attrs
-     */
-    public ClifeLoadingMoreFooter(Context context, AttributeSet attrs) {
+    public CustomMoreFooter(Context context, AttributeSet attrs) {
         super(context, attrs);
-        initView();
     }
 
-    private void initView() {
-        setGravity(Gravity.CENTER);
-        setLayoutParams(new RecyclerView.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+    @Override
+    protected void initView() {
+        super.initView();//父类是有某人居中显示功能，如果不需要就去掉super.initView();
         allLayout = (LinearLayout) LayoutInflater.from(getContext()).inflate(R.layout.pull_to_refresh_clife, null);
         ImageView imageView = (ImageView) allLayout.findViewById(R.id.lodimg);
         imageView.setImageResource(R.drawable.icon_loading_animation);
@@ -59,32 +45,10 @@ public class ClifeLoadingMoreFooter extends LinearLayout implements IRefreshFoot
     }
 
     @Override
-    public void setLoadingHint(String hint) {
-        loadingHint = hint;
-    }
-
-    @Override
-    public void setNoMoreHint(String hint) {
-        noMoreHint = hint;
-    }
-
-    @Override
-    public void setLoadingDoneHint(String hint) {
-        loadingDoneHint = hint;
-    }
-
-    @Override
-    public void setProgressStyle(int style) {
-    }
-
-    @Override
-    public boolean isLoadingMore() {
-        return mState == STATE_LOADING;
-    }
-
-    @Override
     public void setState(int state) {
-        this.mState = state;
+        super.setState(state);
+        //以下是我自定义动画需要用到的状态判断，你可以根据自己需求选择。
+        //选择自定义需要处理的状态：STATE_LOADING、STATE_COMPLETE、STATE_NOMORE、STATE_NOMORE
         switch (state) {
             case STATE_LOADING:
                 this.setVisibility(View.VISIBLE);
@@ -103,10 +67,5 @@ public class ClifeLoadingMoreFooter extends LinearLayout implements IRefreshFoot
                 this.setVisibility(View.GONE);
                 break;
         }
-    }
-
-    @Override
-    public View getFooterView() {
-        return this;
     }
 }

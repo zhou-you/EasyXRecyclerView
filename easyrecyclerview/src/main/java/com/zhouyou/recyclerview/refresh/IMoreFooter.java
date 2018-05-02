@@ -8,7 +8,7 @@ import android.view.View;
  * 日期： 2017/3/27 10:18 <br>
  * 版本： v1.0<br>
  */
-public interface IRefreshFooter {
+public interface IMoreFooter {
     public final static int STATE_LOADING = 0;
     public final static int STATE_COMPLETE = 1;
     public final static int STATE_NOMORE = 2;

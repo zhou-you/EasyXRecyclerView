@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 
 import com.zhouyou.recyclerview.refresh.ArrowRefreshHeader;
-import com.zhouyou.recyclerview.refresh.IRefreshFooter;
+import com.zhouyou.recyclerview.refresh.IMoreFooter;
 import com.zhouyou.recyclerview.refresh.IRefreshHeader;
 import com.zhouyou.recyclerview.listener.AppBarStateChangeListener;
 import com.zhouyou.recyclerview.refresh.LoadingMoreFooter;
@@ -61,7 +61,7 @@ public class XRecyclerView extends RecyclerView {
     private static final float DRAG_RATE = 3;
     private LoadingListener mLoadingListener;
     private IRefreshHeader mRefreshHeader;
-    private IRefreshFooter mRefreshFooter;
+    private IMoreFooter mRefreshFooter;
     private boolean pullRefreshEnabled = true;
     private boolean loadingMoreEnabled = true;
     private boolean isEnabledScroll = true;
@@ -196,13 +196,13 @@ public class XRecyclerView extends RecyclerView {
 
     public void loadMoreComplete() {
         isLoadingData = false;
-        mRefreshFooter.setState(IRefreshFooter.STATE_COMPLETE);
+        mRefreshFooter.setState(IMoreFooter.STATE_COMPLETE);
     }
 
     public void setNoMore(boolean noMore) {
         isLoadingData = false;
         isNoMore = noMore;
-        mRefreshFooter.setState(isNoMore ? IRefreshFooter.STATE_NOMORE : IRefreshFooter.STATE_COMPLETE);
+        mRefreshFooter.setState(isNoMore ? IMoreFooter.STATE_NOMORE : IMoreFooter.STATE_COMPLETE);
     }
 
     public void refresh() {
@@ -252,7 +252,7 @@ public class XRecyclerView extends RecyclerView {
         mRefreshHeader = refreshHeader;
     }
 
-    public void setLoadingMoreFooter(IRefreshFooter loadingFooter) {
+    public void setLoadingMoreFooter(IMoreFooter loadingFooter) {
         mRefreshFooter = loadingFooter;
         mRefreshFooter.getFooterView().setVisibility(GONE);
     }
@@ -274,7 +274,7 @@ public class XRecyclerView extends RecyclerView {
     public void setLoadingMoreEnabled(boolean enabled) {
         loadingMoreEnabled = enabled;
         if (!enabled) {
-            mRefreshFooter.setState(IRefreshFooter.STATE_COMPLETE);
+            mRefreshFooter.setState(IMoreFooter.STATE_COMPLETE);
         }
     }
 
@@ -412,7 +412,7 @@ public class XRecyclerView extends RecyclerView {
                    /* && layoutManager.getItemCount() > layoutManager.getChildCount() */ //解决屏幕不满足一屏无法加载更多的问题
                     && !isNoMore && isEnabledScroll && mRefreshHeader.getState() < IRefreshHeader.STATE_REFRESHING) {
                 isLoadingData = true;
-                if (mRefreshFooter instanceof IRefreshFooter) {
+                if (mRefreshFooter instanceof IMoreFooter) {
                     mRefreshFooter.setState(LoadingMoreFooter.STATE_LOADING);
                 } else {
                     mRefreshFooter.getFooterView().setVisibility(View.VISIBLE);

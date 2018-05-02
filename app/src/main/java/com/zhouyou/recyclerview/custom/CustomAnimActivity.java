@@ -44,9 +44,7 @@ public class CustomAnimActivity extends BaseActivity {
         mRecyclerView.setLayoutManager(layoutManager);
 
         mRecyclerView.setRefreshHeader(new CustomRefreshHeader2(this));
-//        mRecyclerView.setLoadingMoreFooter(new ClifeLoadingFooterDemo(this));
-        mRecyclerView.setLoadingMoreProgressStyle(ProgressStyle.ClifeIndicator);
-//        mRecyclerView.setArrowImageView(R.mipmap.iconfont_downgrey);
+        mRecyclerView.setLoadingMoreFooter(new CustomMoreFooter(this));
 
 
         View header = LayoutInflater.from(this).inflate(R.layout.layout_header, (ViewGroup) findViewById(android.R.id.content), false);
@@ -93,7 +91,7 @@ public class CustomAnimActivity extends BaseActivity {
             @Override
             public void onLoadMore() {
                 Log.e("test","=======onLoadMore======="+mRecyclerView.isLoadingMore());
-                if (times < 2) {
+                if (times < 10) {
                     new Handler().postDelayed(new Runnable() {
                         public void run() {
                             //  mRecyclerView.loadMoreComplete();
