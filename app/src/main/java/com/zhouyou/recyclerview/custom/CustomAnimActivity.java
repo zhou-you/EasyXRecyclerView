@@ -122,8 +122,7 @@ public class CustomAnimActivity extends BaseActivity {
                             mRecyclerView.loadMoreComplete();
                             mRecyclerView.setLoadingMoreEnabled(false);
 
-                            //
-                            Log.e("", "");
+                            //Log.e("", "");
                             new Handler().postDelayed(new Runnable() {
                                 public void run() {
 
