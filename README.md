@@ -48,6 +48,10 @@ dependencies {
 
 [![jcenter](https://img.shields.io/badge/Jcenter-Latest%20Release-orange.svg)](https://jcenter.bintray.com/com/zhouyou/easyrecyclerview/)
 
+## 更多详细介绍请查看wiki，戳这里！
+- #### [XRecyclerview功能介绍](https://github.com/zhou-you/EasyXRecyclerView/wiki/recyclerview)
+- #### [RecyclerView万能适配器功能介绍](https://github.com/zhou-you/EasyXRecyclerView/wiki/adapter)
+
 ## 鸣谢
 本库前身主要是以XRecyclerView为基础展开，借鉴和整合其它一些开源项目，再次感谢！
 - [https://github.com/XRecyclerView](https://github.com/XRecyclerView)
