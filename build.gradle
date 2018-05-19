@@ -31,7 +31,6 @@ allprojects {
         options.encoding = "utf-8"
     }*/
 }
-
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
