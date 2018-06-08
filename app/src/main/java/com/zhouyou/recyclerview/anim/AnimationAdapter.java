@@ -2,6 +2,7 @@ package com.zhouyou.recyclerview.anim;
 
 
 import android.content.Context;
+import android.util.Log;
 
 
 import com.zhouyou.recyclerview.adapter.HelperRecyclerViewHolder;
@@ -22,6 +23,6 @@ public class AnimationAdapter extends HelperRecyclerViewAnimAdapter<String> {
     }
     @Override
     protected void HelperBindData(HelperRecyclerViewHolder viewHolder, int position, Object item) {
-        
+        Log.i("test","HelperBindData===");
     }
 }

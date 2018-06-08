@@ -41,12 +41,12 @@ public abstract class HelperRecyclerViewAnimAdapter<T> extends HelperRecyclerVie
         super(data, context);
     }
 
-
     @Override
     public void onBindViewHolder(BH holder, int position) {
+        super.onBindViewHolder(holder, position);
         addAnimation(holder);
     }
-
+    
     protected final void addAnimation(final BH holder) {
         int currentPosition = holder.getAdapterPosition();
         if (null != mCustomAnimator) {
