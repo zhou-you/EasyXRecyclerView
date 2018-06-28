@@ -72,5 +72,8 @@ dependencies {
     compile project(':easyrecyclerview')
     //compile 'com.zhouyou:easyrecyclerview:1.0.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    
+    //这里引入一个ItemDecoration库结合recyclerview教你如何现实悬停效果
+    compile 'com.oushangfeng:PinnedSectionItemDecoration:1.2.5'
     testCompile 'junit:junit:4.12'
 }

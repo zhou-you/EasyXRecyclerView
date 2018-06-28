@@ -89,6 +89,13 @@ public class StickyMainActivity extends BaseActivity {
                         //这里对RecyclerView不需要额外的设置，见News3Fragment  不需要其它任何设置，不能设置：mRecyclerView.setHasFixedSize(true);
                         gotoActivity(StickyTab4Activity.class);
                         break;
+                    case 6://通过ItemDecoration实现 list布局的Sticky效果
+                        //这种方式实现悬停，不会影响刷新和加载更多
+                        gotoActivity(StickyListItemDecorationActivity.class);
+                        break;
+                    case 7://通过ItemDecoration实现 Grid布局的Sticky效果
+                        gotoActivity(StickyGridItemDecorationActivity.class);
+                        break;
                 }
             }
         });
@@ -103,6 +110,8 @@ public class StickyMainActivity extends BaseActivity {
         menus.add(new Menu(3, "tab2切换（AppBarLayout+TabLayout+ViewPager+fragment+RecyclerView） Sticky效果(tab悬停)支持刷新加载更多", ""));
         menus.add(new Menu(4, "tab3切换（AppBarLayout+SmartTabLayout+ViewPager+fragment+RecyclerView） Sticky效果(tab悬停)支持刷新加载更多", ""));
         menus.add(new Menu(5, "tab4切换（StickyNavLayout+SmartTabLayout+ViewPager+fragment+RecyclerView） Sticky效果(tab悬停)支持刷新加载更多", ""));
+        menus.add(new Menu(6, "ItemDecoration 实现List Sticky效果", ""));
+        menus.add(new Menu(7, "ItemDecoration 实现Grid Sticky效果", ""));
         return menus;
     }
 

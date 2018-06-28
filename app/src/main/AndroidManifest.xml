@@ -257,6 +257,16 @@
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name="com.zhouyou.recyclerview.sticky.StickyListItemDecorationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.zhouyou.recyclerview.sticky.StickyGridItemDecorationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>
