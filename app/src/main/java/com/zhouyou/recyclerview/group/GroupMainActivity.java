@@ -66,15 +66,18 @@ public class GroupMainActivity extends BaseActivity {
                         gotoActivity(VariousChildActivity.class);
                         break;
                     case 8:
-                        gotoActivity(GroupedListHeaderFooterActivity.class);
+                        gotoActivity(StickyActivity.class);
                         break;
                     case 9:
-                        gotoActivity(GroupGridHeaderFooterActivity.class);
+                        gotoActivity(GroupedListHeaderFooterActivity.class);
                         break;
                     case 10:
-                        gotoActivity(GroupedAppendStateListActivity.class);
+                        gotoActivity(GroupGridHeaderFooterActivity.class);
                         break;
                     case 11:
+                        gotoActivity(GroupedAppendStateListActivity.class);
+                        break;
+                    case 12:
                         gotoActivity(GroupedAppendStateGridActivity.class);
                         break;
                 }
@@ -94,11 +97,11 @@ public class GroupMainActivity extends BaseActivity {
         menus.add(new Menu(5, "可展开收起的列表", ""));
         menus.add(new Menu(6, "头、尾和子项都支持多种类型的列表", ""));
         menus.add(new Menu(7, "多子项类型的列表", ""));
-        menus.add(new Menu(7, "分组带有Sticky的列表", ""));
-        menus.add(new Menu(8, "支持Xrecyclerview 子项为List的列表", ""));
-        menus.add(new Menu(9, "支持Xrecyclerview 子项为Grid的列表", ""));
-        menus.add(new Menu(10, "分组List显示状态页面（追加占位状态方式）", ""));
-        menus.add(new Menu(11, "分组Grid显示状态页面（追加占位状态方式）", ""));
+        menus.add(new Menu(8, "分组带有Sticky的列表", ""));
+        menus.add(new Menu(9, "支持Xrecyclerview 子项为List的列表", ""));
+        menus.add(new Menu(10, "支持Xrecyclerview 子项为Grid的列表", ""));
+        menus.add(new Menu(11, "分组List显示状态页面（追加占位状态方式）", ""));
+        menus.add(new Menu(12, "分组Grid显示状态页面（追加占位状态方式）", ""));
         return menus;
     }
 
