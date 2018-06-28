@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 
+import com.zhouyou.recyclerview.adapter.BH;
 import com.zhouyou.recyclerview.refresh.ArrowRefreshHeader;
 import com.zhouyou.recyclerview.refresh.IMoreFooter;
 import com.zhouyou.recyclerview.refresh.IRefreshHeader;
@@ -731,7 +732,7 @@ public class XRecyclerView extends RecyclerView {
             adapter.registerAdapterDataObserver(observer);
         }
 
-        private class SimpleViewHolder extends RecyclerView.ViewHolder {
+        private class SimpleViewHolder extends BH {
             public SimpleViewHolder(View itemView) {
                 super(itemView);
             }
