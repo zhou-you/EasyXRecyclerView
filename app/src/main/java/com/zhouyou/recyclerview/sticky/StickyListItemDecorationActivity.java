@@ -19,6 +19,13 @@ import java.util.List;
  * 
  * 这种方式主要是通过ItemDecoration实现。此种好处是能够实现悬停，又不影响刷新和加载更多，
  * 不会有事件冲突的问题
+ * 
+ *  View view = parent.getChildAt(0);
+ if (view instanceof ArrowRefreshHeader) {
+ int height = ((ArrowRefreshHeader) view).getVisibleHeight();
+ Log.i("test", "onDrawOver  height===" + height);
+ if (height != 0) return;
+ }
  * 作者： zhouyou<br>
  * 日期： 2018/6/27 10:48 <br>
  * 版本： v1.0<br>

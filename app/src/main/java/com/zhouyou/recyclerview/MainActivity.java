@@ -5,9 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.zhouyou.recyclerview.adapter.BaseRecyclerViewAdapter;
+import com.zhouyou.recyclerview.adapter.HelperRecyclerViewAdapter;
+import com.zhouyou.recyclerview.adapter.HelperRecyclerViewHolder;
 import com.zhouyou.recyclerview.anim.AnimationActivity;
 import com.zhouyou.recyclerview.bean.ExampleBean;
 import com.zhouyou.recyclerview.custom.CustomAnimActivity;
@@ -15,9 +20,6 @@ import com.zhouyou.recyclerview.divider.DividerMainActivity;
 import com.zhouyou.recyclerview.drag.DragActivity;
 import com.zhouyou.recyclerview.group.GroupMainActivity;
 import com.zhouyou.recyclerview.header.HeaderMainActivity;
-import com.zhouyou.recyclerview.adapter.BaseRecyclerViewAdapter;
-import com.zhouyou.recyclerview.adapter.HelperRecyclerViewAdapter;
-import com.zhouyou.recyclerview.adapter.HelperRecyclerViewHolder;
 import com.zhouyou.recyclerview.state.StateMainActivity;
 import com.zhouyou.recyclerview.sticky.StickyMainActivity;
 import com.zhouyou.recyclerview.swipe.SwipeMenuActivity;
@@ -40,7 +42,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null){
+            //actionBar.setHomeButtonEnabled(true);
+            //actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.openOptionsMenu();
+        }
         //RefreshLoadingManager.getManager().setCusRefreshHeader(new CommonCusHeader());
        // RefreshLoadingManager.getManager().setCusLoadingFooter(new CommonCusFooter());
 
@@ -129,6 +136,25 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.adout_layout:
+                Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(intent);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private List<ExampleBean> getData() {
