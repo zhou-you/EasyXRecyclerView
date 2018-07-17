@@ -2,6 +2,7 @@ package com.zhouyou.recyclerview.refresh;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -114,6 +115,7 @@ public class ArrowRefreshHeader extends LinearLayout implements IRefreshHeader {
 
     @Override
     public void setState(int state) {
+        //Log.i("setState","==="+state);
         if (state == mState) return;
 
 		if (state == STATE_REFRESHING) {	// 显示进度
@@ -172,12 +174,11 @@ public class ArrowRefreshHeader extends LinearLayout implements IRefreshHeader {
 	public void refreshComplete(){
         mHeaderTimeView.setText(friendlyTime(new Date()));
         setState(STATE_DONE);
-        postDelayed(new Runnable() {
-            @Override
+        new Handler().postDelayed(new Runnable(){
             public void run() {
                 reset();
             }
-        },200);
+        }, 200);
 	}
 
 	public void setVisibleHeight(int height) {
@@ -241,7 +242,7 @@ public class ArrowRefreshHeader extends LinearLayout implements IRefreshHeader {
 
     public void reset() {
         smoothScrollTo(0);
-        postDelayed(new Runnable() {
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 setState(STATE_NORMAL);
