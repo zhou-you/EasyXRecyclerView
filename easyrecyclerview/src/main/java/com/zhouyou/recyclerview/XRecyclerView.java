@@ -423,6 +423,7 @@ public class XRecyclerView extends RecyclerView {
         }
     }
 
+    float y1, y2;
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         if (mLastY == -1) {
@@ -431,6 +432,7 @@ public class XRecyclerView extends RecyclerView {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 mLastY = ev.getRawY();
+                y1 = ev.getY();
                 break;
             case MotionEvent.ACTION_MOVE:
                 final float deltaY = ev.getRawY() - mLastY;
@@ -444,7 +446,16 @@ public class XRecyclerView extends RecyclerView {
                 break;
             default:
                 mLastY = -1; // reset
-                if (isOnTop() && pullRefreshEnabled && isEnabledScroll && appbarState == AppBarStateChangeListener.State.EXPANDED) {
+
+                //解决禁止下拉刷新功能，只有加载更多的时候，下拉刷新动作也会触发加载更多的问题
+                y2 = ev.getY();
+                boolean isTop = isOnTop();
+                if (isTop && y2 - y1 > 50 && !pullRefreshEnabled) {
+                    //Log.i("test", "向下滑动...");
+                    return false;
+                }
+                
+                if (isTop && pullRefreshEnabled && isEnabledScroll && appbarState == AppBarStateChangeListener.State.EXPANDED) {
                     if (mRefreshHeader.releaseAction()) {
                         if (mLoadingListener != null) {
                             mLoadingListener.onRefresh();
