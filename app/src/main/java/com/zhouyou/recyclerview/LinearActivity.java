@@ -68,7 +68,7 @@ public class LinearActivity extends BaseActivity {
                         }
                         mAdapter.notifyDataSetChanged();*/
                         List<TestBean> list = new ArrayList<TestBean>();
-                        for (int i = 0; i < 3; i++) {
+                        for (int i = 0; i < 10; i++) {
                             String name = "刷新 姓名 张三" + i;
                             String age = "刷新 年龄：" + i;
                             TestBean testBean = new TestBean(name, age);
@@ -89,13 +89,13 @@ public class LinearActivity extends BaseActivity {
             @Override
             public void onLoadMore() {
                 Log.e("test","=======onLoadMore======="+mRecyclerView.isLoadingMore());
-                if (times < 2) {
+                if (times < 3) {
                     new Handler().postDelayed(new Runnable() {
                         public void run() {
                             //  mRecyclerView.loadMoreComplete();
                             List<TestBean> list = new ArrayList<TestBean>();
                             int size = mAdapter.getItemCount();//适配器中已有的数据
-                            for (int i = 0; i < 3; i++) {
+                            for (int i = 0; i < 10; i++) {
                                 String name = "更多 姓名：张三" + (i + size);
                                 String age = "更多 年龄：" + (i + size);
                                 TestBean testBean = new TestBean(name, age);

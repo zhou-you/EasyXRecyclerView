@@ -99,6 +99,7 @@ public class GridActivity extends BaseActivity {
 
                             mAdapter.notifyDataSetChanged();
                             mRecyclerView.loadMoreComplete();
+                            mRecyclerView.setLoadingMoreEnabled(false);
                         }
                     }, 1000);
                 }
