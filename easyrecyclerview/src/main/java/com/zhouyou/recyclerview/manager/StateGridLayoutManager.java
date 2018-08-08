@@ -4,6 +4,9 @@ import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.zhouyou.recyclerview.adapter.HelperStateRecyclerViewAdapter;
+import com.zhouyou.recyclerview.group.GroupedStateRecyclerViewAdapter;
+
 /**
  * <p>描述：自定义GridLayoutManager</p>
  * 主要用于，如果你是GridLayoutManager布局有3列，但是要显示空页面的时候需要1列，也就是整个一个地方都是空白<br/>
@@ -27,7 +30,16 @@ public class StateGridLayoutManager extends GridLayoutManager {
 
     @Override
     public void onItemsChanged(RecyclerView recyclerView) {
-        int span = getItemCount() == DEFAULT_SPAN_SIZE ? DEFAULT_SPAN_SIZE : mSpanCount;
+        RecyclerView.Adapter adapter = recyclerView.getAdapter();
+        boolean adapter_state = false;
+        if (adapter != null && (adapter instanceof HelperStateRecyclerViewAdapter || adapter instanceof GroupedStateRecyclerViewAdapter)) {
+            HelperStateRecyclerViewAdapter stateAdapter = (HelperStateRecyclerViewAdapter) adapter;
+            int state = stateAdapter.getState();
+            if (state == HelperStateRecyclerViewAdapter.STATE_NORMAL) {
+                adapter_state = true;
+            }
+        }
+        int span = getItemCount() == DEFAULT_SPAN_SIZE ? (adapter_state ? mSpanCount : DEFAULT_SPAN_SIZE) : mSpanCount;
         setSpanCount(span);
         super.onItemsChanged(recyclerView);
     }

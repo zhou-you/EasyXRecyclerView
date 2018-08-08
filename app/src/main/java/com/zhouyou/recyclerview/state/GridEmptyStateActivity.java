@@ -77,7 +77,7 @@ public class GridEmptyStateActivity extends BaseActivity {
             @Override
             public void run() {
                 List<String> list = new ArrayList<String>();
-                for (int i = 0; i < 40; i++) {
+                for (int i = 0; i < 10; i++) {
                     String name = "刷新看效果" + i;
                     list.add(name);
                 }
