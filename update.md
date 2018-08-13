@@ -1,4 +1,8 @@
 ## 更新日志
+### 2018-08-08
+V1.0.4
+- 解决了HelperStateRecyclerViewAdapter适配器GridLayoutManager只有一条数据的时候显示异常的问题
+
 ### 2018-07-17
 V1.0.3
 - 修改了头部刷新会影响底部加载更多的问题
