@@ -38,12 +38,12 @@
 ## 版本说明
 
 ### 当前版本
-[![release](https://img.shields.io/badge/release-v1.0.4-orange.svg)](https://github.com/zhou-you/EasyXRecyclerView/blob/master/update.md)
+[![release](https://img.shields.io/badge/release-v1.0.5-orange.svg)](https://github.com/zhou-you/EasyXRecyclerView/blob/master/update.md)
 
 ### build.gradle设置
 ```
 dependencies {
- compile 'com.zhouyou:easyrecyclerview:1.0.4'
+ compile 'com.zhouyou:easyrecyclerview:1.0.5'
 }
 ```
 想查看所有版本，请点击下面地址。

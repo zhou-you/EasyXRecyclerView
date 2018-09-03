@@ -1,4 +1,8 @@
 ## 更新日志
+### 2018-09-03
+V1.0.5
+- 解决HelperRecyclerViewDragAdapter数组越界的问题
+
 ### 2018-08-08
 V1.0.4
 - 解决了HelperStateRecyclerViewAdapter适配器GridLayoutManager只有一条数据的时候显示异常的问题
