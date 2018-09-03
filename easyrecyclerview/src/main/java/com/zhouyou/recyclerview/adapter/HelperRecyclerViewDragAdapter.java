@@ -22,7 +22,7 @@ import java.util.List;
  * 日期： 2016/11/1 10:29<br>
  * 版本： v2.0<br>
  */
-@SuppressWarnings(value={"unchecked", "deprecation"})
+@SuppressWarnings(value = {"unchecked", "deprecation"})
 public abstract class HelperRecyclerViewDragAdapter<T> extends HelperRecyclerViewAdapter<T> {
 
     private static final int NO_TOGGLE_VIEW = 0;
@@ -35,7 +35,7 @@ public abstract class HelperRecyclerViewDragAdapter<T> extends HelperRecyclerVie
 
     private View.OnTouchListener mOnToggleViewTouchListener;
     private View.OnLongClickListener mOnToggleViewLongClickListener;
-
+    private Object mObject = new Object();
     public HelperRecyclerViewDragAdapter(List<T> data, Context context, int... layoutId) {
         super(data, context, layoutId);
     }
@@ -182,22 +182,28 @@ public abstract class HelperRecyclerViewDragAdapter<T> extends HelperRecyclerVie
     }
 
     public void onItemDragMoving(RecyclerView.ViewHolder source, RecyclerView.ViewHolder target) {
-        int from = getViewHolderPosition(source);
-        int to = getViewHolderPosition(target);
+        synchronized (mObject){
+            int from = getViewHolderPosition(source);
+            int to = getViewHolderPosition(target);
 
-        if (from < to) {
-            for (int i = from; i < to; i++) {
-                Collections.swap(getList(), i, i + 1);
+            if (from < to) {
+                for (int i = from; i < to; i++) {
+                    if ((i + 1) < getItemCount()) {
+                        Collections.swap(getList(), i, i + 1);
+                    }
+                }
+            } else {
+                for (int i = from; i > to; i--) {
+                    if ((i + 1) < getItemCount()) {
+                        Collections.swap(getList(), i, i - 1);
+                    }
+                }
             }
-        } else {
-            for (int i = from; i > to; i--) {
-                Collections.swap(getList(), i, i - 1);
-            }
-        }
-        notifyItemMoved(source.getAdapterPosition(), target.getAdapterPosition());
+            notifyItemMoved(source.getAdapterPosition(), target.getAdapterPosition());
 
-        if (mOnItemDragListener != null && itemDragEnabled) {
-            mOnItemDragListener.onItemDragMoving(source, from, target, to);
+            if (mOnItemDragListener != null && itemDragEnabled) {
+                mOnItemDragListener.onItemDragMoving(source, from, target, to);
+            }
         }
     }
 

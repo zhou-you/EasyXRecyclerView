@@ -160,7 +160,7 @@ public abstract class GroupedStateRecyclerViewAdapter<T>
 
 
     @Override
-    public boolean setGroups(List datas) {
+    public boolean setGroups(List<T> datas) {
         boolean result = super.setGroups(datas);
         invalidateState();
         return result;
