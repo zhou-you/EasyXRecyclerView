@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         //RefreshLoadingManager.getManager().setCusRefreshHeader(new CommonCusHeader());
        // RefreshLoadingManager.getManager().setCusLoadingFooter(new CommonCusFooter());
 
-        mRecyclerView = (com.zhouyou.recyclerview.XRecyclerView) findViewById(R.id.main_recyclerview);
+        mRecyclerView = (XRecyclerView) findViewById(R.id.main_recyclerview);
         mRecyclerView.setPullRefreshEnabled(false);
         mRecyclerView.setLoadingMoreEnabled(false);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
