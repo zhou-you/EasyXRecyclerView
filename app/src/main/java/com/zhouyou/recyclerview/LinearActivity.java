@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.zhouyou.recyclerview.adapter.MyAdapter;
 import com.zhouyou.recyclerview.bean.TestBean;
 import com.zhouyou.recyclerview.adapter.BaseRecyclerViewAdapter;
+import com.zhouyou.recyclerview.refresh.ArrowRefreshHeader;
+import com.zhouyou.recyclerview.refresh.IRefreshHeader;
 import com.zhouyou.recyclerview.refresh.ProgressStyle;
 import com.zhouyou.recyclerviewdemo.R;
 
@@ -41,6 +43,11 @@ public class LinearActivity extends BaseActivity {
         layoutManager.setAutoMeasureEnabled(true);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(layoutManager);
+
+        /*IRefreshHeader refreshHeader = mRecyclerView.getRefreshHeader();
+        if(refreshHeader instanceof ArrowRefreshHeader){
+            ((ArrowRefreshHeader) refreshHeader).setStatusTextViewColor(R.color.color4);
+        }*/
 
         //mRecyclerView.setRefreshProgressStyle(ProgressStyle.ClifeIndicator);
         //mRecyclerView.setLoadingMoreProgressStyle(ProgressStyle.ClifeIndicator);

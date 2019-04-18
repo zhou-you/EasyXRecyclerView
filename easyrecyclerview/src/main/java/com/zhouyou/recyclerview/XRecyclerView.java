@@ -253,6 +253,10 @@ public class XRecyclerView extends RecyclerView {
         mRefreshHeader = refreshHeader;
     }
 
+    public IRefreshHeader getRefreshHeader() {
+        return mRefreshHeader;
+    }
+
     public void setLoadingMoreFooter(IMoreFooter loadingFooter) {
         mRefreshFooter = loadingFooter;
         mRefreshFooter.getFooterView().setVisibility(GONE);
@@ -409,8 +413,8 @@ public class XRecyclerView extends RecyclerView {
                     head_foot_items_Count > layoutManager.getChildCount() 
                     && !isNoMore && mRefreshHeader.getState() < BaseRefreshHeader.STATE_REFRESHING) {*/
             if (layoutManager.getChildCount() > 0
-                    && lastVisibleItemPosition >= layoutManager.getItemCount() - 1 
-                   /* && layoutManager.getItemCount() > layoutManager.getChildCount() */ //解决屏幕不满足一屏无法加载更多的问题
+                    && lastVisibleItemPosition >= layoutManager.getItemCount() - 1
+                    /* && layoutManager.getItemCount() > layoutManager.getChildCount() */ //解决屏幕不满足一屏无法加载更多的问题
                     && !isNoMore && isEnabledScroll && mRefreshHeader.getState() < IRefreshHeader.STATE_REFRESHING) {
                 isLoadingData = true;
                 if (mRefreshFooter instanceof IMoreFooter) {
@@ -424,6 +428,7 @@ public class XRecyclerView extends RecyclerView {
     }
 
     float y1, y2;
+
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         if (mLastY == -1) {
@@ -454,7 +459,7 @@ public class XRecyclerView extends RecyclerView {
                     //Log.i("test", "向下滑动...");
                     return false;
                 }
-                
+
                 if (isTop && pullRefreshEnabled && isEnabledScroll && appbarState == AppBarStateChangeListener.State.EXPANDED) {
                     if (mRefreshHeader.releaseAction()) {
                         if (mLoadingListener != null) {
