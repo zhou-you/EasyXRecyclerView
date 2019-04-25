@@ -1,4 +1,16 @@
 ## 更新日志
+
+### 2019-04-25
+V1.0.6
+- 增加ArrowRefreshHeader可以设置文案颜色
+使用方式例如：
+
+```
+IRefreshHeader refreshHeader = mRecyclerView.getRefreshHeader();
+        if(refreshHeader instanceof ArrowRefreshHeader){
+            ((ArrowRefreshHeader) refreshHeader).setStatusTextViewColor(R.color.color4);
+        }
+```
 ### 2018-09-03
 V1.0.5
 - 解决HelperRecyclerViewDragAdapter数组越界的问题
